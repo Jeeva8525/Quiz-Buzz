@@ -30,7 +30,7 @@
 
   "1f29d4b6-4b5c-4d87-8b89-92f0b59c94a4": {
     "name": "quiz3",
-    "topic": "math",
+    "topic": "programming",
     "qns": [
       ["2 + 2 = ?", "4", "3", "4", "5"],
       ["Square root of 16?", "4", "2", "6", "4"],
@@ -60,7 +60,7 @@
 
   "2b14ec9d-8c17-4d69-a1f3-7c6cb847c91e": {
     "name": "quiz5",
-    "topic": "geography",
+    "topic": "programming",
     "qns": [
       ["Capital of India?", "New Delhi", "Mumbai", "Delhi", "New Delhi"],
       ["Largest ocean?", "Pacific", "Atlantic", "Indian", "Pacific"],
@@ -75,7 +75,7 @@
 
   "5c19db62-87e0-4b30-94d3-8d3e947ad982": {
     "name": "quiz6",
-    "topic": "computers",
+    "topic": "programming",
     "qns": [
       ["CPU stands for?", "Central Processing Unit", "Central Program Unit", "Central Processing Unit"],
       ["Binary of 2?", "10", "01", "10", "11"]
@@ -116,7 +116,7 @@
 
   "8a0f94e7-63b4-4ed8-b9de-3cb2a30cfc44": {
     "name": "quiz9",
-    "topic": "general",
+    "topic": "programming",
     "qns": [
       ["Sky color?", "Blue", "Red", "Blue", "Green"],
       ["Sun rises in?", "East", "West", "East", "North"],
