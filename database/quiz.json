@@ -1,0 +1,148 @@
+{
+  "3c6278e2-a889-4913-9843-ef8f1119a9b6": {
+    "name": "quiz1",
+    "topic": "sports",
+    "qns": [
+      ["Who won FIFA 2018?", "France", "Brazil", "France", "Germany", "Argentina"],
+      ["How many players in a football team?", "11", "10", "11", "12", "9"]
+    ],
+    "attempts": 10,
+    "avgScore": 1.6,
+    "highestScore": 2,
+    "rating": 1.8,
+    "totalReviews": 20
+  },
+
+  "7a19f8f3-9f14-4a7d-a35e-5c38d1d2e821": {
+    "name": "quiz2",
+    "topic": "science",
+    "qns": [
+      ["Chemical symbol of water?", "H2O", "O2", "H2O", "CO2"],
+      ["Speed of light unit?", "m/s", "km/h", "m/s", "cm/s"],
+      ["Earth is a?", "Planet", "Star", "Galaxy", "Planet"]
+    ],
+    "attempts": 14,
+    "avgScore": 2.1,
+    "highestScore": 3,
+    "rating": 1.9,
+    "totalReviews": 25
+  },
+
+  "1f29d4b6-4b5c-4d87-8b89-92f0b59c94a4": {
+    "name": "quiz3",
+    "topic": "math",
+    "qns": [
+      ["2 + 2 = ?", "4", "3", "4", "5"],
+      ["Square root of 16?", "4", "2", "6", "4"],
+      ["10 / 2 = ?", "5", "2", "5", "10"],
+      ["5 × 6 = ?", "30", "20", "25", "30"]
+    ],
+    "attempts": 18,
+    "avgScore": 2.9,
+    "highestScore": 4,
+    "rating": 1.7,
+    "totalReviews": 32
+  },
+
+  "9dbe2a6c-8c4e-4fd5-bc27-8cb29f9a8411": {
+    "name": "quiz4",
+    "topic": "history",
+    "qns": [
+      ["First President of India?", "Rajendra Prasad", "Nehru", "Gandhi", "Rajendra Prasad"],
+      ["Independence year?", "1947", "1950", "1947", "1930"]
+    ],
+    "attempts": 9,
+    "avgScore": 1.2,
+    "highestScore": 2,
+    "rating": 1.5,
+    "totalReviews": 12
+  },
+
+  "2b14ec9d-8c17-4d69-a1f3-7c6cb847c91e": {
+    "name": "quiz5",
+    "topic": "geography",
+    "qns": [
+      ["Capital of India?", "New Delhi", "Mumbai", "Delhi", "New Delhi"],
+      ["Largest ocean?", "Pacific", "Atlantic", "Indian", "Pacific"],
+      ["Mount Everest is in?", "Himalayas", "Alps", "Andes", "Himalayas"]
+    ],
+    "attempts": 22,
+    "avgScore": 2.4,
+    "highestScore": 3,
+    "rating": 1.6,
+    "totalReviews": 28
+  },
+
+  "5c19db62-87e0-4b30-94d3-8d3e947ad982": {
+    "name": "quiz6",
+    "topic": "computers",
+    "qns": [
+      ["CPU stands for?", "Central Processing Unit", "Central Program Unit", "Central Processing Unit"],
+      ["Binary of 2?", "10", "01", "10", "11"]
+    ],
+    "attempts": 30,
+    "avgScore": 1.4,
+    "highestScore": 2,
+    "rating": 1.9,
+    "totalReviews": 40
+  },
+
+  "c1b7d9e4-8c0e-4f2f-bfb4-8b37b9b12a71": {
+    "name": "quiz7",
+    "topic": "movies",
+    "qns": [
+      ["Director of Inception?", "Christopher Nolan", "Spielberg", "Nolan", "Christopher Nolan"],
+      ["Oscar award is for?", "Movies", "Sports", "Movies", "Music"]
+    ],
+    "attempts": 11,
+    "avgScore": 1.3,
+    "highestScore": 2,
+    "rating": 1.4,
+    "totalReviews": 15
+  },
+
+  "f3c0a8f2-bd2f-4a1e-8c52-d6a29e85b10a": {
+    "name": "quiz8",
+    "topic": "music",
+    "qns": [
+      ["7 notes in music?", "Sa Re Ga Ma Pa Dha Ni", "Do Re Mi", "Sa Re Ga Ma Pa Dha Ni"]
+    ],
+    "attempts": 7,
+    "avgScore": 0.8,
+    "highestScore": 1,
+    "rating": 1.2,
+    "totalReviews": 9
+  },
+
+  "8a0f94e7-63b4-4ed8-b9de-3cb2a30cfc44": {
+    "name": "quiz9",
+    "topic": "general",
+    "qns": [
+      ["Sky color?", "Blue", "Red", "Blue", "Green"],
+      ["Sun rises in?", "East", "West", "East", "North"],
+      ["Humans have how many eyes?", "2", "1", "2", "3"]
+    ],
+    "attempts": 50,
+    "avgScore": 2.6,
+    "highestScore": 3,
+    "rating": 1.9,
+    "totalReviews": 60
+  },
+
+  "e6b27a4c-f2c4-4b2d-9b9e-fb9c1c5a8d22": {
+    "name": "quiz10",
+    "topic": "programming",
+    "qns": [
+      ["JS is?", "Language", "Compiler", "Language"],
+      ["HTML stands for?", "HyperText Markup Language", "Hyper Tool", "HyperText Markup Language"],
+      ["CSS used for?", "Styling", "Logic", "Styling", "Database"],
+      ["Which is loop?", "for", "if", "for", "switch"],
+      ["Node.js runs on?", "V8", "JVM", "V8", "CLR"]
+    ],
+    "attempts": 35,
+    "avgScore": 3.9,
+    "highestScore": 5,
+    "rating": 2.0,
+    "totalReviews": 48
+  }
+}
