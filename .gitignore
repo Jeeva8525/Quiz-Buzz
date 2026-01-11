@@ -1,0 +1,3 @@
+#node modules will not be pushed to git
+#Any one cloning this repo can install using 'npm install' command
+node_modules/
