@@ -1,8 +1,12 @@
-const express = require('express');
-const app = express();
+import express from 'express';
+import fs from 'fs'
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const fs= require('fs');
-const path = require('path');
+const __filePath = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filePath)
+
+const app = express();
 
 app.use(express.static('./public'));
 
@@ -22,7 +26,7 @@ app.get("/api/quiz",(req,res)=>{
     if(!search && !topic){
         return res.status(200).json(quiz);
     }
-    filtered_quiz= {};
+    let filtered_quiz= {};
     
     for(let id in quiz){
         let topicMatch=true;
