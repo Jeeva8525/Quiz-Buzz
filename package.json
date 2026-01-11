@@ -1,27 +1,27 @@
 {
-  "name": "quiz-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev" : "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vishveshwaran-A/Quiz-website.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/Vishveshwaran-A/Quiz-website/issues"
-  },
-  "homepage": "https://github.com/Vishveshwaran-A/Quiz-website#readme",
-  "dependencies": {
-    "express": "^4.22.1",
-    "uuid": "^13.0.0"
-  }
+	"name": "quiz-website",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Vishveshwaran-A/Quiz-website.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/Vishveshwaran-A/Quiz-website/issues"
+	},
+	"homepage": "https://github.com/Vishveshwaran-A/Quiz-website#readme",
+	"dependencies": {
+		"express": "^4.22.1",
+		"uuid": "^13.0.0"
+	}
 }
