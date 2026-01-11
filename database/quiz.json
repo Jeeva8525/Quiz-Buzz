@@ -1,6 +1,6 @@
 {
   "3c6278e2-a889-4913-9843-ef8f1119a9b6": {
-    "name": "quiz1",
+    "name": "quizWithVeryLongName",
     "topic": "sports",
     "qns": [
       ["Who won FIFA 2018?", "France", "Brazil", "France", "Germany", "Argentina"],
