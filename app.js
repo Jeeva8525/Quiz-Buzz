@@ -2,6 +2,7 @@ import express from 'express';
 import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
+import writer from 'utils';
 import { log } from 'console'; //instead of console.log(), can also use log()
 
 const __filePath = fileURLToPath(import.meta.url)
@@ -10,6 +11,8 @@ const __dirname = path.dirname(__filePath)
 const app = express();
 
 app.use(express.static('./public'));
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 
 let quiz = {};
 
@@ -46,6 +49,10 @@ app.get("/api/quiz", (req, res) => {
     }
     return res.status(200).json(filtered_quiz);
 
+});
+
+app.post("/api/quiz/create",(req,res)=>{
+      
 });
 
 app.all('/*', (req, res) => {
