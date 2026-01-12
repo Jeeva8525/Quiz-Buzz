@@ -108,6 +108,7 @@ function startServer() {
     quiz = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'database/quiz.json'), 'utf-8'));
     app.listen(5000, () => {
         console.log("server is listening to port 5000");
+        log("Navigate through 👉 http://localhost:5000/");
     });
 };
 
