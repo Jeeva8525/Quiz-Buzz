@@ -58,7 +58,6 @@ app.post("/api/quiz/create",(req,res)=>{
       do{
           newID=v4();
       }while(quiz[newID]);
-
       quiz[newID]=req.body;
       writeIntoQuiz(quiz);
       res.status(200).json({success:true,msg: "New quiz created"})
