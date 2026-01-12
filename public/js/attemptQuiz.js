@@ -12,8 +12,10 @@ function render(quiz){
     for(let q of qns){
           html+=`<div class="qns"><p>${++qnNo}) ${q[0]}</p>`;
           for(let i=2;i<q.length;i++){
-              html+=`<input type="radio" name="${qnNo}" value="${q[i]}">
-                      <label>${q[i]}</label><br>`;
+              html+=`<label>
+                        <input type="radio" name="${qnNo}" value="${q[i]}">
+                        ${q[i]}
+                    </label><br>`;
           }
           html+=`</div>`;
     } 
