@@ -2,7 +2,7 @@ import express from 'express';
 import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
-import writerIntoQuiz from './utils/write.js';
+import writerIntoQuiz from './utils/writer.js';
 import { log } from 'console'; //instead of console.log(), can also use log()
 
 const __filePath = fileURLToPath(import.meta.url)
