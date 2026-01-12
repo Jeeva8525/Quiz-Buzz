@@ -6,16 +6,18 @@ const qnsContainerTag = document.getElementById('qns-container');
 
 function render(quiz){
     const {qns} = quiz;
+    let option_id;
     let qnNo=0;
+    let html="";
     for(let q of qns){
-          qnsContainerTag.innerHTML+=`<div class="qns">${q[0]}`;
-          let choice=0;
+          html+=`<div class="qns"><p>${++qnNo}) ${q[0]}</p>`;
           for(let i=2;i<q.length;i++){
-              qnsContainerTag.innerHTML+=`${++choice} ${q[i]} <input type="radio" name="${qnNo}" value="${q[i]}">`;
+              html+=`<input type="radio" name="${qnNo}" value="${q[i]}">
+                      <label>${q[i]}</label><br>`;
           }
-          ++qnNo;
-          qnsContainerTag.innerHTML+=`</div>`;
+          html+=`</div>`;
     } 
+    qnsContainerTag.innerHTML=html;
 }
 
 async function main(){
