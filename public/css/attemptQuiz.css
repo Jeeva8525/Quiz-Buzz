@@ -1,0 +1,13 @@
+#qns-container{
+    display: block ;
+    width:100%;
+    
+}
+
+.qns{
+    height:20vh;
+    border: 2px solid red;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;  
+}
