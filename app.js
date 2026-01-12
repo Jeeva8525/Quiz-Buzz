@@ -2,7 +2,9 @@ import express from 'express';
 import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
-import writerIntoQuiz from './utils/writer.js';
+import writeIntoQuiz from './utils/writer.js';
+import {v4} from 'uuid';
+
 import { log } from 'console'; //instead of console.log(), can also use log()
 
 const __filePath = fileURLToPath(import.meta.url)
@@ -52,7 +54,14 @@ app.get("/api/quiz", (req, res) => {
 });
 
 app.post("/api/quiz/create",(req,res)=>{
-      
+      let newID
+      do{
+          newID=v4();
+      }while(quiz[newID]);
+
+      quiz[newID]=req.body;
+      writeIntoQuiz(quiz);
+      res.status(200).json({success:true,msg: "New quiz created"})
 });
 
 app.all('/*', (req, res) => {
