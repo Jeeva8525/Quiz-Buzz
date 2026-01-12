@@ -43,7 +43,7 @@ app.get("/api/quiz", (req, res) => {
             topicMatch = quiz[id].topic.toLowerCase() === topic.toLowerCase();
         }
         if (search) {
-            searchMatch = quiz[id].name.toLowerCase() === search.toLowerCase();
+            searchMatch = quiz[id].name.toLowerCase().includes(search.toLowerCase());
         }
 
         if (topicMatch && searchMatch) {
@@ -53,6 +53,11 @@ app.get("/api/quiz", (req, res) => {
     return res.status(200).json(filtered_quiz);
 
 });
+
+app.get("/quiz/:quizID",(req,res)=>{
+    return res.status(200).sendFile(path.resolve(__dirname,'./public/attemptQuiz/index.html'));
+});
+
 
 app.post("/api/quiz/create",
     checkSchema(createQuizValidationSchema),
