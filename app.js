@@ -80,7 +80,7 @@ app.post("/api/quiz/create",
 app.put("/api/quiz/:quizId", (req, res) => {
     let quizId = req.params.quizId;
     if (!quiz[quizId]) {
-        return res.status(404).json({ success: false, msg: "No such user" })
+        return res.status(404).json({ success: false, msg: "No such quiz" })
     }
     let body = req.body;
     quiz[quizId] = { ...quiz[quizId], ...body };
@@ -88,8 +88,19 @@ app.put("/api/quiz/:quizId", (req, res) => {
     res.status(201).json({ success: true, msg: `quiz "${quiz[quizId]["name"]}" updated ` })
 })
 
+app.delete("/api/quiz/:quizId", (req, res) => {
+    let quizId = req.params.quizId;
+    if (!quiz[quizId]) {
+        return res.status(404).json({ success: false, msg: "No such quiz" })
+    }
+    let quizName = quiz[quizId]["name"];
+    delete quiz[quizId]
+    writeIntoQuiz(quiz);
+    res.status(201).json({ success: true, msg: `quiz "${quizName}" deleted ` })
+})
+
 app.all('/*', (req, res) => {
-    res.status(404).json({ success: 'false', msg: 'no such page exists' });
+    res.status(404).json({ success: false, msg: 'no such page exists' });
 });
 
 function startServer() {
@@ -97,6 +108,7 @@ function startServer() {
     quiz = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'database/quiz.json'), 'utf-8'));
     app.listen(5000, () => {
         console.log("server is listening to port 5000");
+        log("Navigate through 👉 http://localhost:5000/");
     });
 };
 
