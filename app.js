@@ -3,7 +3,9 @@ import fs from 'fs'
 import path from 'path';
 import { fileURLToPath } from 'url';
 import writeIntoQuiz from './utils/writer.js';
-import {v4} from 'uuid';
+import { v4 } from 'uuid';
+import { createQuizValidationSchema } from './utils/validationSchemas.js';
+import { validationResult, matchedData, checkSchema } from 'express-validator';
 
 import { log } from 'console'; //instead of console.log(), can also use log()
 
@@ -14,7 +16,7 @@ const app = express();
 
 app.use(express.static('./public'));
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 
 let quiz = {};
 
@@ -27,7 +29,6 @@ app.get("/api/quiz/:quizID", (req, res) => {
 });
 
 app.get("/api/quiz", (req, res) => {
-    // log(req.query)
     const { search, topic } = req.query;
     if (!search && !topic) {
         return res.status(200).json(quiz);
@@ -53,15 +54,34 @@ app.get("/api/quiz", (req, res) => {
 
 });
 
-app.post("/api/quiz/create",(req,res)=>{
-      let newID
-      do{
-          newID=v4();
-      }while(quiz[newID]);
-      quiz[newID]=req.body;
-      writeIntoQuiz(quiz);
-      res.status(200).json({success:true,msg: "New quiz created"})
-});
+app.post("/api/quiz/create",
+    checkSchema(createQuizValidationSchema),
+    (req, res) => {
+        const validResult = validationResult(req);
+        if (!validResult.isEmpty())
+        {
+            return res.status(400).json({error: validResult.array()})
+        }
+
+        let newID
+        do {
+            newID = v4();
+        } while (quiz[newID]);
+        quiz[newID] = req.body;
+        writeIntoQuiz(quiz);
+        res.status(201).json({ success: true, msg: "New quiz created" })
+    });
+
+app.put("/api/quiz/:quizId", (req, res) => {
+    let quizId = req.params.quizId;
+    if (!quiz[quizId]) {
+        return res.status(404).json({ success: false, msg: "No such user" })
+    }
+    let body = req.body;
+    quiz[quizId] = { ...quiz[quizId], ...body };
+    writeIntoQuiz(quiz);
+    res.status(201).json({ success: true, msg: `quiz "${quiz[quizId]["name"]}" updated ` })
+})
 
 app.all('/*', (req, res) => {
     res.status(404).json({ success: 'false', msg: 'no such page exists' });
