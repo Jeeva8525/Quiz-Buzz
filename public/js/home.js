@@ -33,7 +33,7 @@ const searchTag = document.getElementById('search-box');
 
 const fetchAndRender =async()=>{
       const selectedValue = dropDownTag.value;
-      const searchValue = searchTag.value
+      const searchValue = searchTag.value.trim();
       const response=await fetch(`/api/quiz?search=${searchValue}&topic=${selectedValue}`);
       const filtered_quiz=await response.json();
       render(filtered_quiz);
