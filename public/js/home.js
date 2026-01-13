@@ -51,8 +51,8 @@ function render(quiz){
                 
                 <div class="quiz-topic">category:${quiz[id].topic}</div>
                 <hr>
-                <div class="quiz-avgScore">Avg score:${quiz[id].avgScore}</div>
-                <div class="quiz-highestScore">Highest score:${quiz[id].highestScore}</div>
+                <div class="quiz-avgScore">Avg score:${quiz[id].avgScore.toFixed(2)}(${((quiz[id].avgScore/quiz[id].qns.length)*100).toFixed(2)}%)</div>
+                <div class="quiz-highestScore">Highest score:${quiz[id].highestScore}(${((quiz[id].highestScore/quiz[id].qns.length)*100).toFixed(2)}%)</div>
                 <div class="quiz-btn-container"> 
                      <a href="/quiz/${id}">
                           <button class="quiz-btn">START QUIZ</button>
@@ -62,7 +62,7 @@ function render(quiz){
                     <img src='images/star-ratings/${roundToHalf(quiz[id].rating)}.jpg'>
                 </div>
                 <div class="quiz-rating-display">
-                        ${quiz[id].rating}/5.0 (${quiz[id].totalReviews})
+                        ${quiz[id].rating.toFixed(2)}/5.0 (${quiz[id].totalReviews})
                 </div>
             </div>`;
     }

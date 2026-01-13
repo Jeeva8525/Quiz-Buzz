@@ -16,6 +16,7 @@ const qnsContainerTag = document.getElementById('qns-container');
 
 
 document.getElementById('submit-btn').addEventListener('click',async()=>{
+    let score=0;
     const choices=[];
     for (let i = 1; i <= singleQuiz.qns.length; i++) {
         const selected = document.querySelector(`input[name="qn-${i}"]:checked`);
@@ -25,11 +26,13 @@ document.getElementById('submit-btn').addEventListener('click',async()=>{
         else{
             choices.push(selected.value)
         }
+        if(selected.value===singleQuiz.qns[i-1][1]){
+            score++;
+        }
     }
-    const response = await fetch('/api/submitID');
+    const response = await fetch('/api/generateID');
     const submitID = await response.json();
-
-    fetch(`/api/quiz/${quizID}/choices/${submitID}`,{
+    await fetch(`/api/quiz/${quizID}/choices/${submitID}`,{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -39,8 +42,26 @@ document.getElementById('submit-btn').addEventListener('click',async()=>{
       }).then(()=>{
          window.location.href=`/quiz/${quizID}/submit/${submitID}`;
       })
+    await updateScores(score);
+    
 });
 
+async function updateScores(score){
+    const updatedQuiz =structuredClone(singleQuiz);
+    let { attempts, avgScore, highestScore } = updatedQuiz;
+    updatedQuiz.avgScore=(avgScore*attempts+score)/(attempts+1);
+    updatedQuiz.attempts++;
+    updatedQuiz.highestScore = (score>highestScore)?score:highestScore;
+    console.log(updatedQuiz);
+    await fetch(`/api/quiz/${quizID}`, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(updatedQuiz)
+    });
+    console.log("Hi");
+}
 
 
 function render(quiz){
