@@ -122,6 +122,10 @@ app.get('/quiz/:quizID/submit/:submitID',(req,res)=>{
     return res.status(200).sendFile(path.resolve(__dirname,'./public/score/index.html'));
 });
 
+app.get('/createQuiz',(req,res) => {
+    res.status(200).sendFile(path.resolve(__dirname,'./public/createQuiz/index.html'))
+})
+
 app.all('/*', (req, res) => {
     res.status(404).json({ success: false, msg: 'no such page exists' });
 });

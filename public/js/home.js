@@ -7,9 +7,7 @@ document.body.innerHTML = `<div id="header"></div>
 const quizContainerTag = document.getElementById('quiz-container');
 const searchBarTag = document.getElementById('search-bar');
 
-
-
-searchBarTag.innerHTML=`<button id="create-btn">Create Quiz</button>
+searchBarTag.innerHTML=`<a href='/createQuiz'><button id="create-btn">Create Quiz</button></a>
                         <input type="text" id="search-box" placeholder="Search"></input>
                         <select id="topic-drop-down">
                             <option value="">All</option>
@@ -24,6 +22,11 @@ searchBarTag.innerHTML=`<button id="create-btn">Create Quiz</button>
 
 const dropDownTag= document.getElementById('topic-drop-down');
 const searchTag = document.getElementById('search-box');
+// const createButton = document.getElementById('create-btn');
+
+/* createButton.addEventListener('click',() => {
+    window.location.href = '/quiz/createQuiz';
+}) */
 
 
 const fetchAndRender =async()=>{
