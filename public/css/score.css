@@ -1,0 +1,27 @@
+th,td{
+    padding-left: 20px;
+    
+}
+
+.your-ans{
+      padding-left: 20px;
+}
+
+.crt-ans{
+    padding-left: 20px;
+    color: rgb(65, 228, 65);
+}
+
+.ans-match{
+    color: rgb(65, 228, 65);
+
+}
+.ans-mismatch{
+    padding-left: 20px;
+    color: red;
+} 
+
+#score{
+    font-size: 50px;
+    
+}

@@ -1,24 +1,49 @@
 const quizID = window.location.pathname.split("/").pop();
+
 let singleQuiz=null;
-document.body.innerHTML=`<div id="qns-container"></div><button id="submit-btn">Submit</button><div id="score"></div>`;
+document.body.innerHTML=`<div id="header"></div>
+                         <div id="qns-container"></div>
+                        <button id="submit-btn">Submit</button>
+                        <div id="score"></div>`;
+
+const headerTag = document.getElementById('header');
+headerTag.innerHTML=`<div id="header-name">QuizBuzz</div> 
+                     <div id="header-logo">(Logo)</div>
+                     <div id="settings-contianer">
+                          <button id="settings-btn">Settings</button>
+                     </div>`;
 
 const qnsContainerTag = document.getElementById('qns-container');
 
 
 document.getElementById('submit-btn').addEventListener('click',()=>{
-    let score=0;
+    const choices=[];
     for (let i = 1; i <= singleQuiz.qns.length; i++) {
         const selected = document.querySelector(`input[name="qn-${i}"]:checked`);
-        if (selected && selected.value === singleQuiz.qns[i - 1][1]) {
-            score++;
+        if (!selected) {
+              choices.push("");
+        }
+        else{
+            choices.push(selected.value)
         }
     }
-    document.getElementById('score').innerHTML=`${score}`;
+    
+    fetch(`/api/quiz/${quizID}/choices`,{
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(choices)
+
+      }).then(()=>{
+         window.location.href=`/quiz/${quizID}/submit`;
+      })
 });
+
+
 
 function render(quiz){
     const {qns} = quiz;
-    let option_id;
     let qnNo=0;
     let html="";
     for(let q of qns){
@@ -32,6 +57,16 @@ function render(quiz){
           html+=`</div>`;
     } 
     qnsContainerTag.innerHTML=html;
+    const radios = document.querySelectorAll('input[type="radio"]');
+
+    radios.forEach(radio => {
+        radio.addEventListener('click', function() {
+            if (this.wasChecked) {
+                this.checked = false;
+            }
+            this.wasChecked = this.checked;
+        });
+    });
 }
 
 async function main(){

@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 let quiz = {};
+let choices ={};
 
 app.get("/api/quiz/:quizID", (req, res) => {
     const { quizID } = req.params;
@@ -59,6 +60,8 @@ app.get("/quiz/:quizID",(req,res)=>{
 });
 
 
+
+
 app.post("/api/quiz/create",
     checkSchema(createQuizValidationSchema),
     (req, res) => {
@@ -76,6 +79,8 @@ app.post("/api/quiz/create",
         writeIntoQuiz(quiz);
         res.status(201).json({ success: true, msg: "New quiz created" })
     });
+
+
 
 app.put("/api/quiz/:quizId", (req, res) => {
     let quizId = req.params.quizId;
@@ -98,6 +103,19 @@ app.delete("/api/quiz/:quizId", (req, res) => {
     writeIntoQuiz(quiz);
     res.status(201).json({ success: true, msg: `quiz "${quizName}" deleted ` })
 })
+
+app.post("/api/quiz/:quizID/choices",(req,res)=>{
+     choices[req.params.quizID]=req.body;
+     return res.sendStatus(200);
+});
+
+app.get("/api/quiz/:quizID/choices",(req,res)=>{
+     res.status(200).json(choices[req.params.quizID]);
+});
+
+app.get('/quiz/:quizID/submit',(req,res)=>{
+    return res.status(200).sendFile(path.resolve(__dirname,'./public/score/index.html'));
+});
 
 app.all('/*', (req, res) => {
     res.status(404).json({ success: false, msg: 'no such page exists' });
