@@ -125,3 +125,15 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
+
+#settings-container{
+    position : absolute;
+    right : 0px;
+    top : 6px;
+}
+
+#settings-btn-icon{
+    width : 70px;
+    background-color: transparent;
+    cursor : pointer;
+}
