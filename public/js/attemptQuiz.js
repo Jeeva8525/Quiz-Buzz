@@ -12,7 +12,7 @@ headerTag.innerHTML=`<div id="header-name">QuizBuzz</div>
                      <div id="settings-contianer">
                           <button id="settings-btn">Settings</button>
                      </div>`;
-                     
+
 window.addEventListener('pageshow', () => {
     const radios = document.querySelectorAll('input[type="radio"]');
     radios.forEach(radio => radio.checked = false);
@@ -21,7 +21,7 @@ window.addEventListener('pageshow', () => {
 const qnsContainerTag = document.getElementById('qns-container');
 
 
-document.getElementById('submit-btn').addEventListener('click',()=>{
+document.getElementById('submit-btn').addEventListener('click',async()=>{
     const choices=[];
     for (let i = 1; i <= singleQuiz.qns.length; i++) {
         const selected = document.querySelector(`input[name="qn-${i}"]:checked`);
@@ -32,8 +32,10 @@ document.getElementById('submit-btn').addEventListener('click',()=>{
             choices.push(selected.value)
         }
     }
-    
-    fetch(`/api/quiz/${quizID}/choices`,{
+    const response = await fetch('/api/submitID');
+    const submitID = await response.json();
+
+    fetch(`/api/quiz/${quizID}/choices/${submitID}`,{
         method:'POST',
         headers:{
             'content-type':'application/json'
@@ -41,7 +43,7 @@ document.getElementById('submit-btn').addEventListener('click',()=>{
         body:JSON.stringify(choices)
 
       }).then(()=>{
-         window.location.href=`/quiz/${quizID}/submit`;
+         window.location.href=`/quiz/${quizID}/submit/${submitID}`;
       })
 });
 

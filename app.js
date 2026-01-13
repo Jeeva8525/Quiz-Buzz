@@ -104,16 +104,21 @@ app.delete("/api/quiz/:quizId", (req, res) => {
     res.status(201).json({ success: true, msg: `quiz "${quizName}" deleted ` })
 })
 
-app.post("/api/quiz/:quizID/choices",(req,res)=>{
-     choices[req.params.quizID]=req.body;
+app.get('/api/submitID',(req,res)=>{
+    return res.status(200).json(v4());
+});
+
+app.post("/api/quiz/:quizID/choices/:submitID",(req,res)=>{
+     choices[req.params.quizID]=choices[req.params.quizID] || {};
+     choices[req.params.quizID][req.params.submitID]=req.body;
      return res.sendStatus(200);
 });
 
-app.get("/api/quiz/:quizID/choices",(req,res)=>{
-     res.status(200).json(choices[req.params.quizID]);
+app.get("/api/quiz/:quizID/choices/:submitID",(req,res)=>{
+     res.status(200).json(choices[req.params.quizID][req.params.submitID]);
 });
 
-app.get('/quiz/:quizID/submit',(req,res)=>{
+app.get('/quiz/:quizID/submit/:submitID',(req,res)=>{
     return res.status(200).sendFile(path.resolve(__dirname,'./public/score/index.html'));
 });
 

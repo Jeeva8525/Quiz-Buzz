@@ -5,7 +5,8 @@ headerTag.innerHTML=`<div id="header-name">QuizBuzz</div>
                           <button id="settings-btn">Settings</button>
                      </div><div id="summary"></div><div id="score"></div>`;
 const URLpath = window.location.pathname.split("/");
-const quizID= URLpath[URLpath.length-2];
+const quizID= URLpath[URLpath.length-3];
+const submitID = URLpath[URLpath.length-1];
 
 let singleQuiz;
 let choices={};
@@ -49,7 +50,7 @@ function render(singleQuiz,choices){
 
 }
 async function main(){
-    const response1 = await fetch(`/api/quiz/${quizID}/choices`);
+    const response1 = await fetch(`/api/quiz/${quizID}/choices/${submitID}`);
     choices = await response1.json();
     const response2 = await fetch(`/api/quiz/${quizID}`);
     singleQuiz = await response2.json();
