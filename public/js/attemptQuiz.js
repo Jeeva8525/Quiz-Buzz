@@ -26,7 +26,7 @@ document.getElementById('submit-btn').addEventListener('click',async()=>{
         else{
             choices.push(selected.value)
         }
-        if(selected.value===singleQuiz.qns[i-1][1]){
+        if(selected && selected.value===singleQuiz.qns[i-1][1]){
             score++;
         }
     }
