@@ -20,8 +20,8 @@
         "9"
       ]
     ],
-    "attempts": 3,
-    "avgScore": 1.3333333333333333,
+    "attempts": 4,
+    "avgScore": 1,
     "highestScore": 2,
     "rating": 3.517241379310346,
     "totalReviews": 29
@@ -290,10 +290,10 @@
         "CLR"
       ]
     ],
-    "attempts": 35,
-    "avgScore": 3.9,
+    "attempts": 36,
+    "avgScore": 3.8472222222222223,
     "highestScore": 5,
-    "rating": 2,
-    "totalReviews": 48
+    "rating": 2.0408163265306123,
+    "totalReviews": 49
   }
 }
