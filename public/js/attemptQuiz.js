@@ -12,6 +12,11 @@ headerTag.innerHTML=`<div id="header-name">QuizBuzz</div>
                      <div id="settings-contianer">
                           <button id="settings-btn">Settings</button>
                      </div>`;
+                     
+window.addEventListener('pageshow', () => {
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => radio.checked = false);
+});
 
 const qnsContainerTag = document.getElementById('qns-container');
 
