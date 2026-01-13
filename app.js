@@ -104,7 +104,7 @@ app.delete("/api/quiz/:quizId", (req, res) => {
     res.status(201).json({ success: true, msg: `quiz "${quizName}" deleted ` })
 })
 
-app.get('/api/submitID',(req,res)=>{
+app.get('/api/generateID',(req,res)=>{
     return res.status(200).json(v4());
 });
 
