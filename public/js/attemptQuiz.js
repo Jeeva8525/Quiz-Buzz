@@ -6,12 +6,6 @@ document.body.innerHTML=`<div id="header"></div>
                         <button id="submit-btn">Submit</button>
                         <div id="score"></div>`;
 
-const headerTag = document.getElementById('header');
-headerTag.innerHTML=`<div id="header-name">QuizBuzz</div> 
-                     <div id="header-logo">(Logo)</div>
-                     <div id="settings-contianer">
-                          <button id="settings-btn">Settings</button>
-                     </div>`;
 
 window.addEventListener('pageshow', () => {
     const radios = document.querySelectorAll('input[type="radio"]');

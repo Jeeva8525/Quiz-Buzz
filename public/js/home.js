@@ -7,12 +7,7 @@ document.body.innerHTML = `<div id="header"></div>
 const quizContainerTag = document.getElementById('quiz-container');
 const searchBarTag = document.getElementById('search-bar');
 
-const headerTag = document.getElementById('header');
-headerTag.innerHTML=`<div id="header-name">QuizBuzz</div> 
-                     <div id="header-logo">(Logo)</div>
-                     <div id="settings-container">
-                        <img src="../images/setting-icon.png" id='settings-btn-icon'>
-                     </div>`;
+
 
 searchBarTag.innerHTML=`<button id="create-btn">Create Quiz</button>
                         <input type="text" id="search-box" placeholder="Search"></input>

@@ -5,7 +5,8 @@ body{
 #header{
     position: fixed;
     background-color: rgb(120, 192, 255);
-    height:10vh;
+    height:13vh;
+    display: flex;
     top:0;
     left:0;
     right:0;
@@ -16,7 +17,7 @@ body{
 }
 #header-name{
     font-size: 60px;
-    padding-left: 20px;
+    padding-left: 80px;
     
 }
 
@@ -31,10 +32,36 @@ body{
     right:1%;
     padding-top: 10px;
     height:30%;
+    position : absolute;
+    top : 6px;
 }
 
 #settings-btn{
     padding: 20px 10px;
     border-radius: 20px;
     border: none ;
+}
+
+
+#settings-btn-icon{
+    width : 70px;
+    background-color: transparent;
+    cursor : pointer;
+}
+
+#home-btn{
+    padding: 20px 10px;
+    border-radius: 20px;
+    border: none ;
+}
+
+
+#home-contianer{
+    position: absolute;
+    left:1%;
+    padding-top: 10px;
+    height:30%;
+    position : absolute;
+
+    top : 6px;
 }

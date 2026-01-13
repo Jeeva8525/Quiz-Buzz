@@ -3,6 +3,27 @@ th,td{
     
 }
 
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#summary {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: 30px;
+    outline: 2px solid red;
+}
+
+
+
 .your-ans{
       padding-left: 20px;
 }

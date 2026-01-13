@@ -11,7 +11,7 @@ body{
     align-items: center;
     width:100%;
     background-color: rgb(109, 89, 63);
-    top:10vh;
+    top:13vh;
     height:10vh;
     z-index:2;
 
@@ -126,14 +126,3 @@ body{
     font-weight: bold;
 }
 
-#settings-container{
-    position : absolute;
-    right : 0px;
-    top : 6px;
-}
-
-#settings-btn-icon{
-    width : 70px;
-    background-color: transparent;
-    cursor : pointer;
-}
