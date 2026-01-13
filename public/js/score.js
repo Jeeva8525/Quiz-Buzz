@@ -1,13 +1,17 @@
 
 document.body.innerHTML+=`<div id="summary"></div>
                      <div id="score"></div>
-                     <div id="rating-box"></div>`;
+                     <div id="rating-box">Rate this quiz<img src="/images/star-ratings/0.0.jpg"><div id="btns-box"><button class="rate-btn">No, Thanks</button><button class="rate-btn">Rate</button></div></div>`;
 const URLpath = window.location.pathname.split("/");
 const quizID= URLpath[URLpath.length-3];
 const submitID = URLpath[URLpath.length-1];
 
 let singleQuiz;
 let choices={};
+
+document.getElementsByClassName('rate-btn')[0].addEventListener('click',()=>{
+    document.getElementById('rating-box').style.display="none";
+})
 
 function render(singleQuiz,choices){
     let score=0;
@@ -45,7 +49,7 @@ function render(singleQuiz,choices){
     }
 
     document.getElementById('score').innerHTML=`Your Scored : ${score}/${singleQuiz.qns.length}`
-    document.getElementById('score').style.display = "block"
+    
 
 }
 async function main(){
