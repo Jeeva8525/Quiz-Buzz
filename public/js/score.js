@@ -3,7 +3,9 @@ headerTag.innerHTML=`<div id="header-name">QuizBuzz</div>
                      <div id="header-logo">(Logo)</div>
                      <div id="settings-contianer">
                           <button id="settings-btn">Settings</button>
-                     </div><div id="summary"></div><div id="score"></div>`;
+                     </div>
+                     <div id="summary"></div>
+                     <div id="score"></div>`;
 const URLpath = window.location.pathname.split("/");
 const quizID= URLpath[URLpath.length-3];
 const submitID = URLpath[URLpath.length-1];
@@ -46,7 +48,8 @@ function render(singleQuiz,choices){
         }
     }
 
-    document.getElementById('score').innerHTML=`${score}`
+    document.getElementById('score').innerHTML=`Score : ${score}`
+    document.getElementById('score').style.display = "block"
 
 }
 async function main(){

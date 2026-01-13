@@ -4,7 +4,17 @@ body{
 }
 
 
-
+#submit-btn{
+    display: block; /* to make margin auto work */
+    margin-top : 20px;
+    margin-left : auto;
+    margin-right : auto;
+    padding : 10px 15px;
+    border-radius : 5px;
+    color : white;
+    background-color: #00a2ca;
+    cursor : pointer;
+}
 
 #qns-container{
     display: block ;
