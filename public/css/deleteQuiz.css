@@ -1,0 +1,21 @@
+ body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#dialog{
+    border: 2px solid black;
+    width:40vw;
+    margin-top: 15%;
+    font-size: 40px;
+    padding: 2% 3%;
+}
+
+.btn{
+    
+    display: inline-block;
+    width:45%;
+    height:50px;
+}

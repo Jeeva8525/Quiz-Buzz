@@ -57,8 +57,8 @@ function render(quiz){
             <div class="quiz">
                 <div class="quiz-name">${quiz[id].name}</div>
                 <div class="pop-up-div">
-                    <button class='pop-btns'>Edit</button>
-                    <button class='pop-btns'>Delete</button>
+                    <button class='pop-btns' class='edit-btn'>Edit</button>
+                    <a href="/quiz/${id}/delete"><button class='pop-btns class='delete-btn'>Delete</button></a>
                 </div>
                 <button class="pop-up"><img src='/images/pop-up.jpg'></button>
                 
@@ -95,6 +95,8 @@ function render(quiz){
                      popDivs[i].style.display='none';
                 });
             }
+
+            
 
     }
 }
