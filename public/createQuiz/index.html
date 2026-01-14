@@ -28,7 +28,7 @@
             <div class="quiz-detail">
                 <p>Questions<button id="addQuestionsButton" onclick="addQuestions()">Add</button></p>
                 <div class="question-container">
-
+                    <p>Question Name</p>
                     <input type="text" id="question-1-name" placeholder="Question Name">
 
                     <div id="options-1-container">
@@ -36,22 +36,29 @@
                         <div class="option">
                             <input 
                                 type="text" 
-                                id='question-${quesNo}-option-${++optionsNo}'
+                                id='question-1-option-1'
                                 onblur="updateCorrectAnswerChoices(event,1,1)"
                             > 
-                            <button>X</button>
+                        </div>
+                        <div class="option">
+                            <input 
+                                type="text" 
+                                id='question-1-option-2'
+                                onblur="updateCorrectAnswerChoices(event,1,2)"
+                            > 
                         </div>
                     </div>
 
                     <p>Correct Answer</p>
                     <select name="correctAnswerQn1" id="correctAnswerQn1">
                         <option id="answer-1-option-1"></option>
+                        <option id="answer-1-option-2"></option>
                     </select>
                 </div>
             </div>
         </div>
         <div class="submit-button-container">
-            <button id="submitButton"></button>
+            <button id="submitButton" onclick="submit()">Submit</button>
         </div>
     </div>
 
