@@ -60,7 +60,7 @@ body{
     padding-left: 20px;
     padding-right: 10px;
     padding-top: 2%;
-    height:35vh
+    /* height:35vh */
 }
 
 
@@ -111,6 +111,10 @@ body{
 .quiz-avgScore{
     display: inline-block;
     font-size: 20px;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .quiz-highestScore{
@@ -118,6 +122,10 @@ body{
     font-size: 20px;
     font-style: italic;
     padding-left: 0%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .quiz-rating{
     display: inline-block;
@@ -133,3 +141,32 @@ body{
     font-weight: bold;
 }
 
+@media (max-width: 1000px) or (max-height:400px) {
+  .quiz-rating{
+    display: none;
+  }
+  .quiz-rating-display{
+    display: none;
+  }
+  .quiz-btn{
+    /* position: relative; */
+    bottom: -5px;
+    height:50px;
+    
+  }
+  .quiz{
+    height: 43vh;;
+  }
+}
+
+@media (max-width:1450px){
+  .quiz-rating-display{
+    display: none;
+  }
+}
+
+@media (max-height:400px) {
+    .quiz-btn-container{
+        display: none;
+    }
+}
