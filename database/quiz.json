@@ -298,7 +298,7 @@
   },
   "b74d19f2-e6c8-4e22-9bc4-feb9fb36f296": {
     "name": "quiz11",
-    "topic": "Software",
+    "topic": "programming",
     "qns": [
       [
         "What is linux",
@@ -308,10 +308,10 @@
         "Kernal"
       ]
     ],
-    "attempts": 2,
-    "avgScore": 0.5,
+    "attempts": 3,
+    "avgScore": 0.3333333333333333,
     "highestScore": 1,
-    "rating": 4.5,
-    "totalReviews": 2
+    "rating": 4.333333333333333,
+    "totalReviews": 3
   }
 }
