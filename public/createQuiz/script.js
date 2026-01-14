@@ -93,6 +93,7 @@ function removeQuestion(event) {
 }
 
 function submit() {
+    const bodyObject = {}
     const qns = [];
     let questions;
     for (let x = 1; x <= quesNo; x++) {
@@ -112,7 +113,28 @@ function submit() {
         }
         qns.push(questions)
     }
-    console.log(qns);
+    // console.log(qns);
 
-    const options = [];
+    bodyObject["name"] = document.getElementById('quizName').value;
+    bodyObject["topic"] = document.getElementById('quizTopic').value;
+    bodyObject["qns"] = qns;
+    bodyObject["attempts"] = 0;
+    bodyObject["avgScore"] = 0.0;
+    bodyObject["highestScore"] = 0.0;
+    bodyObject["rating"] = 0.0;
+    bodyObject["totalReviews"] = 0;
+
+    console.log(bodyObject)
+
+    fetch('/api/quiz/create',
+        {
+            method: 'POST',
+            headers : {
+                'content-type' : 'application/json',
+            },
+            body : JSON.stringify(bodyObject)
+        }
+    )
+
+    console.log('exited')
 }
