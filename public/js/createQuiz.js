@@ -116,7 +116,7 @@ function submit() {
     // console.log(qns);
 
     bodyObject["name"] = document.getElementById('quizName').value;
-    bodyObject["topic"] = document.getElementById('quizTopic').value;
+    bodyObject["topic"] = document.getElementById('topic-drop-down').value;
     bodyObject["qns"] = qns;
     bodyObject["attempts"] = 0;
     bodyObject["avgScore"] = 0.0;
@@ -135,6 +135,6 @@ function submit() {
             body : JSON.stringify(bodyObject)
         }
     )
-
+    window.location.href='/';
     console.log('exited')
 }
