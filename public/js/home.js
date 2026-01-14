@@ -55,7 +55,7 @@ function render(quiz){
     for(let id in quiz){
         quizContainerTag.innerHTML+=`
             <div class="quiz">
-                <div class="quiz-name">${quiz[id].name}</div>
+                <div class="quiz-name"><abbr title="${quiz[id].name} (${quiz[id].topic})">${quiz[id].name}</abbr></div>
                 <div class="pop-up-div">
                     <button class='pop-btns' class='edit-btn'>Edit</button>
                     <a href="/quiz/${id}/delete"><button class='pop-btns class='delete-btn'>Delete</button></a>

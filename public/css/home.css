@@ -4,6 +4,10 @@ body{
     font-family: DM sans;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 
 #search-bar{
     position:fixed;
