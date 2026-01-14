@@ -53,6 +53,38 @@ body{
     margin-left: 10px;;
 }
 
+.pop-up {
+    display: inline-block;
+    position: relative; 
+    bottom: 10px;;       
+    width: 30px;  
+    left:25px;              
+    height: 30px;    
+    border: none;           
+    background-color: transparent;    
+}
+
+.pop-up img {
+    max-width: 100%;            
+    max-height: 100%;           
+    object-fit: contain;      
+}
+
+.pop-up-div{
+    position: absolute;
+    display: none;
+    top:10px;
+    right:30px;
+    height:60px;
+    width:70px;
+}
+
+.pop-btns{
+    width: 100%;
+    height:30px;
+    background-color: white;
+}
+
 
 .quiz{
     position: relative;
@@ -74,7 +106,7 @@ body{
     display: inline-block;
     font-size: 30px;
     font-weight:bold;
-    width:100%;
+    width:80%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -141,7 +173,7 @@ body{
     font-weight: bold;
 }
 
-@media (max-width: 1000px) or (max-height:400px) {
+@media (max-width: 1100px) or (max-height:400px) {
   .quiz-rating{
     display: none;
   }
@@ -156,6 +188,10 @@ body{
   }
   .quiz{
     height: 43vh;;
+  }
+
+  .pop-up{
+    display: none;
   }
 }
 

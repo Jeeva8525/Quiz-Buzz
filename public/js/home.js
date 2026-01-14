@@ -20,6 +20,8 @@ searchBarTag.innerHTML=`<a href='/createQuiz'><button id="create-btn">Create Qui
                         </select>`
                         ;
 
+
+
 const dropDownTag= document.getElementById('topic-drop-down');
 const searchTag = document.getElementById('search-box');
 // const createButton = document.getElementById('create-btn');
@@ -45,12 +47,20 @@ let quiz=null;
 function roundToHalf(x) {
     return (Math.round(x * 2) / 2).toFixed(1);
 }
+
+
+
 function render(quiz){
     quizContainerTag.innerHTML='';
     for(let id in quiz){
         quizContainerTag.innerHTML+=`
             <div class="quiz">
                 <div class="quiz-name">${quiz[id].name}</div>
+                <div class="pop-up-div">
+                    <button class='pop-btns'>Edit</button>
+                    <button class='pop-btns'>Delete</button>
+                </div>
+                <button class="pop-up"><img src='/images/pop-up.jpg'></button>
                 
                 <div class="quiz-topic">category:${quiz[id].topic}</div>
                 <hr>
@@ -68,6 +78,24 @@ function render(quiz){
                         ${quiz[id].rating.toFixed(2)}/5.0 (${quiz[id].totalReviews})
                 </div>
             </div>`;
+
+            const popUps = document.getElementsByClassName('pop-up');
+            const popDivs=document.getElementsByClassName('pop-up-div');
+            for(let i=0;i<popUps.length;i++){
+                popUps[i].addEventListener('mouseover',()=>{
+                     popDivs[i].style.display='block';
+                });
+                popUps[i].addEventListener('mouseleave',()=>{
+                     popDivs[i].style.display='none';
+                });
+                popDivs[i].addEventListener('mouseover',()=>{
+                     popDivs[i].style.display='block';
+                });
+                popDivs[i].addEventListener('mouseleave',()=>{
+                     popDivs[i].style.display='none';
+                });
+            }
+
     }
 }
 
