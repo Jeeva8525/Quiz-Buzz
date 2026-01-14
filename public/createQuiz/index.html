@@ -19,26 +19,35 @@
                 <p>Quiz name</p>
                 <input type="text" id="quizName">
             </div>
+
             <div class="quiz-detail">
                 <p>Topic</p>
                 <input type="text" id="quizTopic">
             </div>
+
             <div class="quiz-detail">
-                <p>Question<button>Add</button></p>
-                <input type="text" id="question">
+                <p>Questions<button id="addQuestionsButton" onclick="addQuestions()">Add</button></p>
+                <div class="question-container">
 
-                <div id="optionsContainer">
-                    <p>Options<button id="addOptionsButton">Add</button></p>
-                    <div class="option">
-                        <input type="text" id="question-1-option-1">
-                        <button>X</button>
+                    <input type="text" id="question-1-name" placeholder="Question Name">
+
+                    <div id="options-1-container">
+                        <p>Options<button id="addOptionsButton" onclick="addOptions(1)">Add</button></p>
+                        <div class="option">
+                            <input 
+                                type="text" 
+                                id='question-${quesNo}-option-${++optionsNo}'
+                                onblur="updateCorrectAnswerChoices(event,1,1)"
+                            > 
+                            <button>X</button>
+                        </div>
                     </div>
-                </div>
 
-                <p>Correct Answer</p>
-                <select name="correctAnswerQn1" id="correctAnswerQn1">
-                    
-                </select>
+                    <p>Correct Answer</p>
+                    <select name="correctAnswerQn1" id="correctAnswerQn1">
+                        <option id="answer-1-option-1"></option>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="submit-button-container">
