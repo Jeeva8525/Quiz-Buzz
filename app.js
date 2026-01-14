@@ -132,7 +132,7 @@ app.get('/createQuiz',(req,res) => {
 })
 
 app.all('/*', (req, res) => {
-    res.status(404).json({ success: false, msg: 'no such page exists' });
+    res.status(404).sendFile(path.resolve(__dirname,'./public/error/index.html'));
 });
 
 function startServer() {
