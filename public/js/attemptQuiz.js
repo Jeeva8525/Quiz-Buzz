@@ -2,6 +2,7 @@ const quizID = window.location.pathname.split("/").pop();
 
 let singleQuiz=null;
 document.body.innerHTML=`<div id="header"></div>
+                         <div id="details"></div>
                          <div id="qns-container"></div>
                         <button id="submit-btn">Submit</button>
                         <div id="score"></div>`;
@@ -65,9 +66,10 @@ async function updateScores(score){
 
 
 function render(quiz){
-    const {qns} = quiz;
+    const {name,topic,avgScore,highestScore,qns} = quiz;
     let qnNo=0;
     let html="";
+    document.getElementById('details').innerHTML=`<span>${name}</span> <span>category:${topic}</span><span>Average Score: ${avgScore.toFixed(2)}</span> <span>Highest: ${highestScore}</span>`;
     for(let q of qns){
           html+=`<div class="qns"><p>${++qnNo}) ${q[0]}</p>`;
           for(let i=2;i<q.length;i++){

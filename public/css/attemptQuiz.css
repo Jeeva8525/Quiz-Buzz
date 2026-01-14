@@ -15,11 +15,17 @@ body{
     background-color: #00a2ca;
     cursor : pointer;
 }
-
+#details{
+    display: flex;
+    margin-top: 15vh;
+    flex-direction: column;
+    padding-left: 40%;
+    font-size: 30px;;
+}
 #qns-container{
     display: block ;
     width:100%;
-    margin-top: 15vh;
+    margin-top: 8vh;
     
 }
 
