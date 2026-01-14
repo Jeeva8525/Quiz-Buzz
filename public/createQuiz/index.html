@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/createQuiz.css">
+    <link rel="stylesheet" href="/css/header.css">
     <title>Create Quiz</title>
 </head>
 
 <body>
+    <div id="header"></div>
     <div class="whole-container">
         <div class="header-section">
             <h2>Create your own Quiz</h2>
@@ -22,7 +24,15 @@
 
             <div class="quiz-detail">
                 <p>Topic</p>
-                <input type="text" id="quizTopic">
+                <select id="topic-drop-down">
+                            <option value="">All</option>
+                            <option value="sports">Sports</option>
+                            <option value="science">Science</option>
+                            <option value="programming">Programming</option>
+                            <option value="history">History</option>
+                            <option value="movies">Movies</option>
+                            <option value="music">Music</option>
+                </select>`
             </div>
 
             <div class="quiz-detail">
@@ -63,6 +73,7 @@
     </div>
 
 </body>
-<script src="script.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/createQuiz.js"></script>
 
 </html>
