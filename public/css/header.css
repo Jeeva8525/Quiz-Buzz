@@ -36,13 +36,24 @@ a:focus {
 }
 
 
-#settings-contianer{
+#settings-container{
     position: absolute;
     right:1%;
     padding-top: 10px;
     height:30%;
     position : absolute;
     top : 6px;
+}
+
+#settings-container img{
+    width : 80px;
+    position : relative;
+    margin-top : -5px;
+    margin-right : -10px;
+}
+
+#settings-container img:hover{
+    cursor : pointer;
 }
 
 #settings-btn{
@@ -65,7 +76,7 @@ a:focus {
 }
 
 
-#home-contianer{
+#home-container{
     position: absolute;
     left:1%;
     padding-top: 10px;

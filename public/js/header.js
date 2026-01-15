@@ -1,9 +1,9 @@
 const headerTag = document.getElementById('header');
-headerTag.innerHTML=`<div id="home-contianer">
+headerTag.innerHTML=`<div id="home-container">
                           <a href="/"><button id="home-btn">Home</button></a>
                      </div>
                      <div id="header-name">QuizBuzz</div> 
                      <div id="header-logo">(Logo)</div>
-                     <div id="settings-contianer">
-                          <button id="settings-btn">Settings</button>
+                     <div id="settings-container">
+                          <img src="../images/setting-icon.png" alt="Settings" />
                      </div>`;
