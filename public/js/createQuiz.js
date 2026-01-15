@@ -79,6 +79,7 @@ function addQuestions() {
 
             <p>Correct Answer</p>
             <select name="correctAnswerQn${quesNo}" id="correctAnswerQn${quesNo}">
+                <option selected disabled value=''></option>
                 <option id="answer-${quesNo}-option-1"></option>
                 <option id="answer-${quesNo}-option-2"></option>
             </select>
@@ -94,6 +95,22 @@ function addQuestions() {
 
 }
 
+function isNotEmpty(){
+    const inputs = document.querySelectorAll("input[type='text']");
+    for(let i of inputs){
+        if(i.value.trim()==''){
+            return false;
+        }
+    }
+    const dropDowns = document.querySelectorAll("select");
+    for(let i of dropDowns){
+        if(i.value===''){
+            return false;
+        }
+    }
+    return true;
+}
+
 function removeQuestion(event) {
     const outerDiv = event.target.parentElement.parentElement; // get the div by using the x button's event
     outerDiv.remove();
@@ -104,6 +121,10 @@ function removeQuestion(event) {
 }
 
 function submit() {
+    if(!isNotEmpty()){
+        alert('Fill all the fields');
+        return;
+    }
     const bodyObject = {}
     const qns = [];
     let questions;
