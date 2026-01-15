@@ -143,7 +143,7 @@ function submit() {
         const ans = ansElt.options[ansElt.selectedIndex].text;
         questions.push(ans);
 
-        for (let y = 0; y < ansElt.options.length; y++) {
+        for (let y = 1; y < ansElt.options.length; y++) {
             questions.push(ansElt.options[y].text)
         }
         qns.push(questions)
