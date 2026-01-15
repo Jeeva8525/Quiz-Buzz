@@ -60,7 +60,7 @@ function render(quiz){
                     <a href="/quiz/${id}/edit"><button class='pop-btns' class='edit-btn'>Edit</button></a>
                     <a href="/quiz/${id}/delete"><button class='pop-btns class='delete-btn'>Delete</button></a>
                 </div>
-                <button class="pop-up"><img src='/images/pop-up.jpg'></button>
+                <button class="pop-up"><img src='/images/pop-up.png'></button>
                 
                 <div class="quiz-topic">category:${quiz[id].topic}</div>
                 <hr>
