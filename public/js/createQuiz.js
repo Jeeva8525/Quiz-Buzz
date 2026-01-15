@@ -141,7 +141,7 @@ function submit() {
         const ans = ansElt.options[ansElt.selectedIndex].text;
         questions.push(ans);
 
-        for (let y = 0; y < ansElt.options.length; y++) {
+        for (let y = 1; y < ansElt.options.length; y++) { //loop from y = 1 because the 0th option is "Select answer"
             questions.push(ansElt.options[y].text)
         }
         qns.push(questions)
