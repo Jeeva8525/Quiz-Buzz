@@ -5,5 +5,5 @@ headerTag.innerHTML=`<div id="home-container">
                      <div id="header-name">QuizBuzz</div> 
                      <div id="header-logo">(Logo)</div>
                      <div id="settings-container">
-                          <img src="../images/setting-icon.png" alt="Settings" />
+                          <img src="../images/setting-icon-3.png" alt="Settings" />
                      </div>`;
