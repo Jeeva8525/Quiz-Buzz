@@ -79,7 +79,7 @@ function addQuestions() {
 
             <p>Correct Answer</p>
             <select name="correctAnswerQn${quesNo}" id="correctAnswerQn${quesNo}">
-                <option selected disabled value=''></option>
+                <option selected disabled value=''>Select Answer</option>
                 <option id="answer-${quesNo}-option-1"></option>
                 <option id="answer-${quesNo}-option-2"></option>
             </select>
@@ -125,6 +125,7 @@ function submit() {
         alert('Fill all the fields');
         return;
     }
+    
     const bodyObject = {}
     const qns = [];
     let questions;
@@ -156,7 +157,7 @@ function submit() {
     bodyObject["rating"] = 0.0;
     bodyObject["totalReviews"] = 0;
 
-    console.log(bodyObject)
+    // console.log(bodyObject)
 
     fetch('/api/quiz/create',
         {
@@ -168,5 +169,5 @@ function submit() {
         }
     )
     window.location.href='/';
-    console.log('exited')
+    // console.log('exited')
 }

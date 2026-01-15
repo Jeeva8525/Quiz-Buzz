@@ -57,7 +57,7 @@ function render(quiz){
             <div class="quiz">
                 <div class="quiz-name"><abbr title="${quiz[id].name} (${quiz[id].topic})">${quiz[id].name}</abbr></div>
                 <div class="pop-up-div">
-                    <button class='pop-btns' class='edit-btn'>Edit</button>
+                    <a href="/quiz/${id}/edit"><button class='pop-btns' class='edit-btn'>Edit</button></a>
                     <a href="/quiz/${id}/delete"><button class='pop-btns class='delete-btn'>Delete</button></a>
                 </div>
                 <button class="pop-up"><img src='/images/pop-up.jpg'></button>

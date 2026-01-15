@@ -4,49 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/createQuiz.css">
+    <link rel="stylesheet" href="/css/editQuiz.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <title>Create Quiz</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <title>Edit Quiz</title>
 </head>
 
 <body>
-    <div id="header"></div>  
+    <div id="header"></div>
     <div class="header-section">
-            <h2>Create your own Quiz and publish it</h2>
-                <div class="name-topic">
-                        <div class="quiz-detail "id='quizName-box'>
-                            <p>Quiz name</p> 
-                            <input type="text" id="quizName" autocomplete="off">
-                        </div>
+        <h2>Edit Quiz</h2>
+        <div class="name-topic">
+            <div class="quiz-detail " id='quizName-box'>
+                <p>Quiz name</p>
+                <input type="text" id="quizName" autocomplete="off">
+            </div>
 
-                        <div class="quiz-detail" id='quizTopic-box'>
-                            <p>Topic</p>
-                            <select id="topic-drop-down">
-                                        <option value="" selected disabled>Choose Topic</option>
-                                        <option value="sports">Sports</option>
-                                        <option value="science">Science</option>
-                                        <option value="programming">Programming</option>
-                                        <option value="history">History</option>
-                                        <option value="movies">Movies</option>
-                                        <option value="music">Music</option>
-                            </select>`
-                        </div>
-                    </div> 
-                </div>
-            
-     <div class="whole-container">
-        
-            <div class="quiz-details">
+            <div class="quiz-detail" id='quizTopic-box'>
+                <p>Topic</p>
+                <select id="topic-drop-down">
+                    <option value="" selected disabled>Choose Topic</option>
+                    <option value="sports">Sports</option>
+                    <option value="science">Science</option>
+                    <option value="programming">Programming</option>
+                    <option value="history">History</option>
+                    <option value="movies">Movies</option>
+                    <option value="music">Music</option>
+                </select>`
+            </div>
+        </div>
+    </div>
+
+    <div class="whole-container">
+
+        <div class="quiz-details">
             <div class="quiz-detail">
                 <p>Questions</p>
+                <!--
                 <div class="question-container">
                     <div class="qn-no">1) </div><input type="text" id="question-1-name" placeholder="Question" autocomplete="off">
 
                     <div id="options-1-container">
-                        <p>Options<button id="addOptionsButton" onclick="addOptions(1)">Add</button></p>
+                        <p>Options<button id="addOptionsButton" onclick="addOptionsDefault(1,'default')">Add</button></p>
                         <div class="option">
                             <input 
                                 type="text" 
@@ -68,7 +71,7 @@
                         <option selected disabled value=''>Select Answer</option>
                         <option id="answer-1-option-1"></option>
                         <option id="answer-1-option-2"></option>
-                    </select>
+                    </select> -->
                 </div>
             </div>
             <div class="submit-button-container">
@@ -77,12 +80,12 @@
             </div>
 
         </div>
-        
-        
+
+
     </div>
 
 </body>
 <script src="/js/header.js"></script>
-<script src="/js/createQuiz.js"></script>
+<script src="/js/editQuiz.js"></script>
 
 </html>

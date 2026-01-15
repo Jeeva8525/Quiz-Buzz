@@ -59,6 +59,10 @@ app.get("/quiz/:quizID",(req,res)=>{
     return res.status(200).sendFile(path.resolve(__dirname,'./public/attemptQuiz/index.html'));
 });
 
+app.get("/quiz/:quizID/edit",(req,res)=>{
+    return res.status(200).sendFile(path.resolve(__dirname,'./public/editQuiz/index.html'));
+});
+
 app.get("/quiz/:quizID/delete",(req,res)=>{
     return res.status(200).sendFile(path.resolve(__dirname,'./public/deleteQuiz/index.html'));
 });
