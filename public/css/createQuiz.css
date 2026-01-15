@@ -1,3 +1,94 @@
 .whole-container{
-    margin-top: 15vh;
+    margin-top: 35vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+
+.quiz-details{
+    width:40%;
+}
+
+.quiz-detail{
+    display: inline-block;
+    width:100%;
+}
+
+.name-topic{
+    width:100%;
+    flex:1;
+}
+
+.header-section{
+    width: 70%;
+    position: absolute;
+    top:15vh;
+    text-align: center;
+    border: 2px solid green ;
+    z-index: 2;
+    background-color: rgb(158, 199, 245);
+    border-radius: 30px;
+}
+#quizName-box{
+    position: relative;
+    bottom: 20px;
+    width:60%;
+    
+}
+
+#quizTopic-box{
+    padding-left: 10px;;
+    width:20%;
+}
+
+#quizName{
+    width: 100%;
+}
+
+#topic-drop-down{
+    width: 100%;
+}
+
+#addQuestionsButton{
+    margin-top: 10px;;
+    flex:0.4;
+    border: none;
+    border-radius: 100px;
+
+}
+
+.question-container{
+    border: 2px solid red;
+    width:100%;
+    padding:10%;
+    margin-top: 2%;
+}
+
+.submit-button-container{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 30%;
+}
+
+#submitButton{
+    flex: 1;
+    margin-left: 5%;
+    border-radius: 30px;;
+    border: none;
+}
+
+.qn-no{
+    display: inline-block;
 }

@@ -13,36 +13,37 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <div class="whole-container">
-        <div class="header-section">
-            <h2>Create your own Quiz</h2>
-            <h4>and publish to others</h4>
-        </div>
-        <div class="quiz-details">
-            <div class="quiz-detail">
-                <p>Quiz name</p>
-                <input type="text" id="quizName">
-            </div>
+    <div id="header"></div>  
+    <div class="header-section">
+            <h2>Create your own Quiz and publish it</h2>
+                <div class="name-topic">
+                        <div class="quiz-detail "id='quizName-box'>
+                            <p>Quiz name</p> 
+                            <input type="text" id="quizName" autocomplete="off">
+                        </div>
 
+                        <div class="quiz-detail" id='quizTopic-box'>
+                            <p>Topic</p>
+                            <select id="topic-drop-down">
+                                        <option value="" selected disabled>Choose Topic</option>
+                                        <option value="sports">Sports</option>
+                                        <option value="science">Science</option>
+                                        <option value="programming">Programming</option>
+                                        <option value="history">History</option>
+                                        <option value="movies">Movies</option>
+                                        <option value="music">Music</option>
+                            </select>`
+                        </div>
+                    </div> 
+                </div>
+            
+     <div class="whole-container">
+        
+            <div class="quiz-details">
             <div class="quiz-detail">
-                <p>Topic</p>
-                <select id="topic-drop-down">
-                            <option value="" selected disabled>All</option>
-                            <option value="sports">Sports</option>
-                            <option value="science">Science</option>
-                            <option value="programming">Programming</option>
-                            <option value="history">History</option>
-                            <option value="movies">Movies</option>
-                            <option value="music">Music</option>
-                </select>`
-            </div>
-
-            <div class="quiz-detail">
-                <p>Questions<button id="addQuestionsButton" onclick="addQuestions()">Add</button></p>
+                <p>Questions</p>
                 <div class="question-container">
-                    <p>Question Name</p>
-                    <input type="text" id="question-1-name" placeholder="Question Name">
+                    <div class="qn-no">1) </div><input type="text" id="question-1-name" placeholder="Question" autocomplete="off">
 
                     <div id="options-1-container">
                         <p>Options<button id="addOptionsButton" onclick="addOptions(1)">Add</button></p>
@@ -50,7 +51,7 @@
                             <input 
                                 type="text" 
                                 id='question-1-option-1'
-                                onblur="updateCorrectAnswerChoices(event,1,1)"
+                                onblur="updateCorrectAnswerChoices(event,1,1)" autocomplete="off"
                             > 
                         </div>
                         <div class="option">
@@ -69,10 +70,15 @@
                     </select>
                 </div>
             </div>
+            <div class="submit-button-container">
+                <button id="addQuestionsButton" onclick="addQuestions()">Add</button>
+                <button id="submitButton" onclick="submit()">Submit</button>
+                
+            </div>
+
         </div>
-        <div class="submit-button-container">
-            <button id="submitButton" onclick="submit()">Submit</button>
-        </div>
+        
+        
     </div>
 
 </body>

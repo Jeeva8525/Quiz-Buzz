@@ -56,8 +56,8 @@ function addQuestions() {
 
     questionContainer.insertAdjacentHTML('beforeend', `
         <div class="question-container">
-            <p>Question Name <button onclick="removeQuestion(event)">X</button></p>
-            <input type="text" id="question-${++quesNo}-name" placeholder="Question Name">
+            <p>Question <button onclick="removeQuestion(event)">X</button></p>
+             <div class="qn-no"></div><input type="text" id="question-${++quesNo}-name" placeholder="Question" autocomplete="off">
             <div id="options-${quesNo}-container">
                 <p>Options<button id="addOptionsButton" onclick="addOptions(${quesNo})">Add</button></p>
                 <div class="option">
@@ -65,6 +65,7 @@ function addQuestions() {
                         type="text" 
                         id='question-${quesNo}-option-${++optionsNo[quesNo]}'
                         onblur="updateCorrectAnswerChoices(event,${quesNo},${optionsNo[quesNo]})"
+                        autocomplete="off"
                     > 
                 </div>
                 <div class="option">
@@ -82,7 +83,13 @@ function addQuestions() {
                 <option id="answer-${quesNo}-option-2"></option>
             </select>
         </div>
-    `)
+        
+    `);
+
+    const qnNos = document.getElementsByClassName('qn-no');
+    for(let i=0;i<qnNos.length;i++){
+        qnNos[i].textContent=`${i+1}) `;
+    }
 
 
 }
@@ -90,6 +97,10 @@ function addQuestions() {
 function removeQuestion(event) {
     const outerDiv = event.target.parentElement.parentElement; // get the div by using the x button's event
     outerDiv.remove();
+    const qnNos = document.getElementsByClassName('qn-no');
+    for(let i=0;i<qnNos.length;i++){
+        qnNos[i].textContent=`${i+1}) `;
+    }
 }
 
 function submit() {
