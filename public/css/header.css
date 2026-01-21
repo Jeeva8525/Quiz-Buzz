@@ -2,6 +2,14 @@ body{
     font-family: DM sans;
 } 
 
+*{
+    scrollbar-width: none;
+}
+
+*:focus{
+    outline: none;
+}
+
 a,
 a:hover,
 a:active,
@@ -13,17 +21,19 @@ a:focus {
 
 #header{
     position: fixed;
-    background-color: rgb(120, 192, 255);
+    background-color: #42D674;
     height:13vh;
+    padding-top: 3px;
     display: flex;
     top:0;
     left:0;
     right:0;
     z-index:100;
 }
-#header div{
+#header > div{
     display: inline;
 }
+
 #header-name{
     font-size: 60px;
     padding-left: 80px;
@@ -31,18 +41,29 @@ a:focus {
 }
 
 #header-logo{
-    margin-left:30px;
-    font-size: 50px;;
+    margin-left:10px;
+    font-size: 50px;
+    height:100%;
+    width:30%;
+}
+
+#header-logo img{
+    width:80%;
+    height:100%;
 }
 
 
+
+
 #settings-container{
-    position: absolute;
     right:1%;
     padding-top: 10px;
+    width:50px;
+    margin-left: auto;
+    margin-right: 20px;
     height:30%;
-    position : absolute;
     top : 6px;
+    
 }
 
 #settings-container img{
@@ -72,15 +93,14 @@ a:focus {
     padding: 20px 10px;
     border-radius: 20px;
     border: none ;
+    margin-right: auto;
+    margin-left: 20px;;
 }
 
 
 #home-container{
-    position: absolute;
     left:1%;
     padding-top: 10px;
     height:30%;
-    position : absolute;
-
     top : 6px;
 }

@@ -20,6 +20,7 @@ function addOptions(qNo) {
                 type="text" 
                 id='question-${qNo}-option-${++optionsNo[qNo]}'
                 onblur="updateCorrectAnswerChoices(event,${qNo},${optionsNo[qNo]})"
+                autocomplete="off"
             >
             <button onclick="removeOption(event)">X</button>
         </div>
@@ -75,6 +76,7 @@ function addQuestions() {
                         type="text" 
                         id='question-${quesNo}-option-${++optionsNo[quesNo]}'
                         onblur="updateCorrectAnswerChoices(event,${quesNo},${optionsNo[quesNo]})"
+                        autocomplete="off"
                     > 
                 </div>
             </div>
@@ -254,7 +256,8 @@ function addQuestionsDefault(qn, isFirstQuestion) { //adds a single question //q
                 type="text" 
                 id='question-${quesNo}-option-${++optionsNo[quesNo]}'
                 onblur="updateCorrectAnswerChoices(event,${quesNo},${optionsNo[quesNo]})"
-                value = ${qn[x]}
+                value = "${qn[x]}"
+                autocomplete="off"
             >
         </div>
         `
@@ -267,7 +270,8 @@ function addQuestionsDefault(qn, isFirstQuestion) { //adds a single question //q
                 type="text" 
                 id='question-${quesNo}-option-${++optionsNo[quesNo]}'
                 onblur="updateCorrectAnswerChoices(event,${quesNo},${optionsNo[quesNo]})"
-                value = ${qn[x]}
+                value = "${qn[x]}"
+                autocomplete="off"
             >
             <button onclick="removeOption(event)">X</button>
         </div>

@@ -1,10 +1,11 @@
 .whole-container{
-    margin-top: 35vh;
+    padding-top: 35vh;
     width:100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
     
 }
 
@@ -14,6 +15,7 @@ body{
     flex-direction: column;
     align-items: center;
     overflow: scroll;
+    background-color:rgb(203, 255, 161);
 }
 
 

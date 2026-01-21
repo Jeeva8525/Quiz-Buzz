@@ -14,7 +14,9 @@ body{
     flex-direction: column;
     align-items: center;
     overflow: scroll;
+    background-color:rgb(203, 255, 161);
 }
+
 
 
 .quiz-details{

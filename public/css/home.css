@@ -2,6 +2,7 @@ body{
     height: 100vh;
     margin: 0px;
     font-family: DM sans;
+    background-color:rgb(203, 255, 161);
 }
 
 abbr {
@@ -14,22 +15,21 @@ abbr {
     display: flex;
     align-items: center;
     width:100%;
-    background-color: rgb(109, 89, 63);
+    background-color:#80EF80;
     top:13vh;
     height:10vh;
     z-index:2;
-
 }
 
 
 #quiz-container{
      padding-top: 25vh;
-     padding-left: 1%;
-     width:100%;
+     padding-left: 2%;
+     width:98%;
      display: grid;
      grid-template-columns: 22% 22% 22% 22%;
      column-gap: 3%;
-     row-gap: 20px;
+     row-gap: 40px;
 
 }
 #create-btn{
@@ -41,22 +41,39 @@ abbr {
     cursor : pointer;
     color : white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image : linear-gradient(45deg, rgb(232, 57, 255),rgb(153, 39, 219),rgba(85, 7, 211, 0.527),rgba(46, 0, 253, 0.637));
+    background-color: #dfffdf;
+    color: #0f2a18;
+    border: none;
 }
 #search-box{
     flex:3;
     max-width:300px;
     margin-left: 30%;
     height:40%;
+    background-color: #dfffdf;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    font-size: 22px;
+}
+#search-box:focus{
+    outline: none;
 }
 #topic-drop-down{
     flex:3;
     max-width:200px;
     height:40%;
     border-radius: 20px;
-    margin-left: 10px;;
+    margin-left: 10px;
+    background-color: #dfffdf;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    font-size: 22px;;
 }
-
+#topic-drop-down:focus{
+    outline: none;
+}
 .pop-up {
     display: inline-block;
     position: relative; 
@@ -86,19 +103,38 @@ abbr {
 .pop-btns{
     width: 100%;
     height:30px;
-    background-color: white;
+
+    border-radius: 2px;
+    border:1px solid #0f2a18 ;
+    background-color:#80EF80;
+    color: #0f2a18;
+    font-weight: bold;
 }
 
 
 .quiz{
     position: relative;
-    border: 2px solid black;
+    /* border: 2px solid; */
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 1px #80EF80;
+    background-color: #bdf891;
     padding-left: 20px;
+    color:#2f3c2f ;
     padding-right: 10px;
     padding-top: 2%;
     /* height:35vh */
 }
 
+.quiz:hover{
+    transform: scale(1.01);
+    background-color: #e1ffc9;
+    bottom:5px;
+
+    transition: background-color 0.3s,
+                transform 1s,
+                bottom 1s;
+    
+}
 
 .quiz img{
     height:39px;
@@ -130,8 +166,8 @@ abbr {
     width:100%;
     border-radius: 20px;
     border:none;
-    background-color: black;
-    color: white;
+    background-color:#80EF80;
+    color: #0f2a18;
     font-weight: bold;
     cursor : pointer;
 }

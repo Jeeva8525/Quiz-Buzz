@@ -18,6 +18,7 @@ function addOptions(qNo) {
                 type="text" 
                 id='question-${qNo}-option-${++optionsNo[qNo]}'
                 onblur="updateCorrectAnswerChoices(event,${qNo},${optionsNo[qNo]})"
+                autocomplete="off
             >
             <button onclick="removeOption(event)">X</button>
         </div>
@@ -73,6 +74,7 @@ function addQuestions() {
                         type="text" 
                         id='question-${quesNo}-option-${++optionsNo[quesNo]}'
                         onblur="updateCorrectAnswerChoices(event,${quesNo},${optionsNo[quesNo]})"
+                         autocomplete="off
                     > 
                 </div>
             </div>
