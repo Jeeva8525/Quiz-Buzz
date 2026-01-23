@@ -204,8 +204,6 @@ async function fillDefaultValues() {
 
 
 }
-
-fillDefaultValues(); //call the initial function to render all default values
 async function renderTopics(){
     const response=await fetch('/api/topics');
     topics= await response.json();
@@ -219,6 +217,8 @@ async function renderTopics(){
 }
 
 renderTopics()
+
+fillDefaultValues(); //call the initial function to render all default values
 
 
 function addQuestionsDefault(qn, isFirstQuestion) { //adds a single question //qn is a element of qns attribute in quiz (i.e, qn = quiz["qns"][x])

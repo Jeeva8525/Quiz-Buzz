@@ -13,6 +13,22 @@ body{
     
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #D6CE15;   
+}
+
+tr {
+  border-bottom: 1px solid #D6CE15; 
+}
+
+th, td {
+  padding: 10px;
+  border: none;  
+}
+
+
 
 #back-to-home{
     margin-top: 20px;
