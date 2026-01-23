@@ -44,15 +44,16 @@ function roundToHalf(x) {
     return (Math.round(x * 2) / 2).toFixed(1);
 }
 
-
-
-function render(quiz,topics){
+function renderTopics(topics){
     let html='';
     topics.forEach((e)=>{
        html+=`<option value="${e}">${e}</option>`
     });
 
     dropDownTag.innerHTML+=html;
+}
+
+function render(quiz){
 
     quizContainerTag.innerHTML='';
     for(let id in quiz){
@@ -106,7 +107,9 @@ async function main(){
     quiz= await response.json();
     const response2=await fetch('/api/topics');
     topics= await response2.json();
-    render(quiz,topics);
+    renderTopics(topics);
+    render(quiz);
+    
 }
 
 main()
