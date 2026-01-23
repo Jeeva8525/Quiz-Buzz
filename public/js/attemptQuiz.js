@@ -69,7 +69,7 @@ function render(quiz){
     const {name,topic,avgScore,highestScore,qns} = quiz;
     let qnNo=0;
     let html="";
-    document.getElementById('details').innerHTML=`<span>${name}</span> <span>category:${topic}</span><span>Average Score: ${avgScore.toFixed(2)}</span> <span>Highest: ${highestScore}</span>`;
+    document.getElementById('details').innerHTML=`<span>${name}</span> <span>${topic}</span><span>Avg: ${avgScore.toFixed(2)}</span> <span>Highest: ${highestScore}</span>`;
     for(let q of qns){
           html+=`<div class="qns"><p>${++qnNo}) ${q[0]}</p>`;
           for(let i=2;i<q.length;i++){

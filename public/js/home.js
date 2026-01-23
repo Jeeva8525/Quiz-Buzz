@@ -5,18 +5,13 @@ document.body.innerHTML = `<div id="header"></div>
                           <div id="quiz-container"></div>`;
 
 const quizContainerTag = document.getElementById('quiz-container');
+
 const searchBarTag = document.getElementById('search-bar');
 
 searchBarTag.innerHTML=`<a href='/createQuiz'><button id="create-btn">Create Quiz</button></a>
                         <input type="text" id="search-box" placeholder="Search"></input>
                         <select id="topic-drop-down">
                             <option value="">All</option>
-                            <option value="sports">Sports</option>
-                            <option value="science">Science</option>
-                            <option value="programming">Programming</option>
-                            <option value="history">History</option>
-                            <option value="movies">Movies</option>
-                            <option value="music">Music</option>
                         </select>`
                         ;
 
@@ -43,6 +38,7 @@ dropDownTag.addEventListener('change',fetchAndRender);
 searchTag.addEventListener('keyup',fetchAndRender);
 
 let quiz=null;
+let topics=null;
 
 function roundToHalf(x) {
     return (Math.round(x * 2) / 2).toFixed(1);
@@ -50,7 +46,14 @@ function roundToHalf(x) {
 
 
 
-function render(quiz){
+function render(quiz,topics){
+    let html='';
+    topics.forEach((e)=>{
+       html+=`<option value="${e}">${e}</option>`
+    });
+
+    dropDownTag.innerHTML+=html;
+
     quizContainerTag.innerHTML='';
     for(let id in quiz){
         quizContainerTag.innerHTML+=`
@@ -95,16 +98,15 @@ function render(quiz){
                      popDivs[i].style.display='none';
                 });
             }
-
-            
-
     }
 }
 
 async function main(){
     const response=await fetch('/api/quiz');
     quiz= await response.json();
-    render(quiz);
+    const response2=await fetch('/api/topics');
+    topics= await response2.json();
+    render(quiz,topics);
 }
 
 main()

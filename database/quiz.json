@@ -1,7 +1,7 @@
 {
   "3c6278e2-a889-4913-9843-ef8f1119a9b6": {
     "name": "quizWithVeryLongName",
-    "topic": "sports",
+    "topic": "Sports",
     "qns": [
       [
         "Who won FIFA 2018?",
@@ -28,7 +28,7 @@
   },
   "7a19f8f3-9f14-4a7d-a35e-5c38d1d2e821": {
     "name": "quiz2",
-    "topic": "science",
+    "topic": "Science",
     "qns": [
       [
         "Chemical symbol of water?",
@@ -60,7 +60,7 @@
   },
   "1f29d4b6-4b5c-4d87-8b89-92f0b59c94a4": {
     "name": "quiz3",
-    "topic": "programming",
+    "topic": "Programming",
     "qns": [
       [
         "2 + 2 = ?",
@@ -99,7 +99,7 @@
   },
   "9dbe2a6c-8c4e-4fd5-bc27-8cb29f9a8411": {
     "name": "quiz4",
-    "topic": "history",
+    "topic": "History",
     "qns": [
       [
         "First President of India?",
@@ -124,7 +124,7 @@
   },
   "2b14ec9d-8c17-4d69-a1f3-7c6cb847c91e": {
     "name": "quiz5",
-    "topic": "programming",
+    "topic": "Programming",
     "qns": [
       [
         "Capital of India?",
@@ -156,7 +156,7 @@
   },
   "5c19db62-87e0-4b30-94d3-8d3e947ad982": {
     "name": "quiz6",
-    "topic": "programming",
+    "topic": "Programming",
     "qns": [
       [
         "CPU stands for?",
@@ -180,7 +180,7 @@
   },
   "c1b7d9e4-8c0e-4f2f-bfb4-8b37b9b12a71": {
     "name": "quiz7",
-    "topic": "movies",
+    "topic": "Movies",
     "qns": [
       [
         "Director of Inception?",
@@ -205,7 +205,7 @@
   },
   "f3c0a8f2-bd2f-4a1e-8c52-d6a29e85b10a": {
     "name": "quiz8",
-    "topic": "music",
+    "topic": "Music",
     "qns": [
       [
         "7 notes in music?",
@@ -222,7 +222,7 @@
   },
   "8a0f94e7-63b4-4ed8-b9de-3cb2a30cfc44": {
     "name": "quiz9",
-    "topic": "programming",
+    "topic": "Programming",
     "qns": [
       [
         "Sky color?",
@@ -254,7 +254,7 @@
   },
   "e6b27a4c-f2c4-4b2d-9b9e-fb9c1c5a8d22": {
     "name": "quiz10",
-    "topic": "programming",
+    "topic": "Programming",
     "qns": [
       [
         "JS is?",
@@ -298,7 +298,7 @@
   },
   "b74d19f2-e6c8-4e22-9bc4-feb9fb36f296": {
     "name": "quiz11",
-    "topic": "programming",
+    "topic": "Programming",
     "qns": [
       [
         "What is linux",

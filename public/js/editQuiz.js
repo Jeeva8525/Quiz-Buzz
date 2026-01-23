@@ -7,6 +7,7 @@ const submitButton = document.getElementById('submitButton');
 
 const addOptionsButton = document.getElementById('addOptionsButton');
 
+
 let quesNo = 1;
 let optionsNo = [-1, 2]; //optionsNo is 1-based-index  // first question is already created with two default options => optionsNo[1] = 2
 
@@ -88,8 +89,12 @@ function addQuestions() {
                 <option id="answer-${quesNo}-option-2"></option>
             </select>
         </div>
+
+
         
-    `);
+        
+    `
+   );
 
     const qnNos = document.getElementsByClassName('qn-no');
     for (let i = 0; i < qnNos.length; i++) {
@@ -191,11 +196,30 @@ async function fillDefaultValues() {
         addQuestionsDefault(qns[x]);
     }
 
+    const qnNos = document.getElementsByClassName('qn-no');
+    for (let i = 0; i < qnNos.length; i++) {
+        qnNos[i].textContent = `${i + 1}) `;
+    }   
+
 
 
 }
 
 fillDefaultValues(); //call the initial function to render all default values
+async function renderTopics(){
+    const response=await fetch('/api/topics');
+    topics= await response.json();
+    let html='';
+    topics.forEach((e)=>{
+       html+=`<option value="${e}">${e}</option>`
+    });
+
+    topicDropDown.innerHTML+=html;
+    
+}
+
+renderTopics()
+
 
 function addQuestionsDefault(qn, isFirstQuestion) { //adds a single question //qn is a element of qns attribute in quiz (i.e, qn = quiz["qns"][x])
     optionsNo.push(0);
@@ -397,3 +421,4 @@ function addQuestionsDefault(qn, isFirstQuestion) { //adds a single question //q
     `
 
 } */
+

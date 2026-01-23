@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 
 let quiz = {};
 let choices ={};
+let topics=[];
 
 app.get("/api/quiz/:quizID", (req, res) => {
     const { quizID } = req.params;
@@ -52,6 +53,11 @@ app.get("/api/quiz", (req, res) => {
         }
     }
     return res.status(200).json(filtered_quiz);
+
+});
+
+app.get("/api/topics", (req, res) => {
+    return res.status(200).json(topics);
 
 });
 
@@ -142,6 +148,7 @@ app.all('/*', (req, res) => {
 function startServer() {
 
     quiz = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'database/quiz.json'), 'utf-8'));
+    topics = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'database/topics.json'), 'utf-8')).topics;
     app.listen(5000, () => {
         console.log("server is listening to port 5000");
         log("Navigate through 👉 http://localhost:5000/ (Ctr + Click)");

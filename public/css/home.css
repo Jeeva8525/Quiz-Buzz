@@ -1,8 +1,7 @@
 body{
     height: 100vh;
     margin: 0px;
-    font-family: DM sans;
-    background-color:rgb(203, 255, 161);
+    font-family: DM sans;    
 }
 
 abbr {
@@ -15,7 +14,7 @@ abbr {
     display: flex;
     align-items: center;
     width:100%;
-    background-color:#80EF80;
+    background-color:#1F2605;
     top:13vh;
     height:10vh;
     z-index:2;
@@ -41,20 +40,31 @@ abbr {
     cursor : pointer;
     color : white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #dfffdf;
-    color: #0f2a18;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
+    color: #1F2605;
     border: none;
+}
+#create-btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 #search-box{
     flex:3;
     max-width:300px;
     margin-left: 30%;
     height:40%;
-    background-color: #dfffdf;
+    background: linear-gradient(to bottom, #53900F, #D6CE15); 
     color: black;
+   
     border-radius: 50px;
     border: none;
     font-size: 22px;
+}
+
+::placeholder{
+    color: black;
 }
 #search-box:focus{
     outline: none;
@@ -65,8 +75,8 @@ abbr {
     height:40%;
     border-radius: 20px;
     margin-left: 10px;
-    background-color: #dfffdf;
-    color: black;
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
+    color: rgb(0, 0, 0);
     border-radius: 50px;
     border: none;
     font-size: 22px;;
@@ -74,6 +84,7 @@ abbr {
 #topic-drop-down:focus{
     outline: none;
 }
+
 .pop-up {
     display: inline-block;
     position: relative; 
@@ -85,6 +96,10 @@ abbr {
     background-color: transparent;    
 }
 
+select option{
+    background-color: #1F2605;
+    color:#D6CE15 ;
+}
 .pop-up img {
     max-width: 100%;            
     max-height: 100%;           
@@ -106,8 +121,8 @@ abbr {
 
     border-radius: 2px;
     border:1px solid #0f2a18 ;
-    background-color:#80EF80;
-    color: #0f2a18;
+    background-color:#1F2605;
+    color: #D6CE15;
     font-weight: bold;
 }
 
@@ -116,10 +131,10 @@ abbr {
     position: relative;
     /* border: 2px solid; */
     border-radius: 30px;
-    box-shadow: 0px 0px 5px 1px #80EF80;
-    background-color: #bdf891;
+    
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
     padding-left: 20px;
-    color:#2f3c2f ;
+    color:#1F2605;
     padding-right: 10px;
     padding-top: 2%;
     /* height:35vh */
@@ -128,11 +143,13 @@ abbr {
 .quiz:hover{
     transform: scale(1.01);
     background-color: #e1ffc9;
+    box-shadow: 2px 2px 2px 1px #53900F;
     bottom:5px;
 
     transition: background-color 0.3s,
                 transform 1s,
-                bottom 1s;
+                bottom 1s,
+                box-shadow 0.1s;
     
 }
 
@@ -166,10 +183,15 @@ abbr {
     width:100%;
     border-radius: 20px;
     border:none;
-    background-color:#80EF80;
-    color: #0f2a18;
+    background-color:#1F2605;
+    color: #D6CE15;
     font-weight: bold;
     cursor : pointer;
+}
+
+.quiz-btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 
 .quiz-topic{

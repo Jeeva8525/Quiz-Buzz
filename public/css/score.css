@@ -9,13 +9,19 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(203, 255, 161);
+    color: #D6CE15;
+    
 }
 
 
 #back-to-home{
     margin-top: 20px;
     height: 50px;
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
+    border: none;
+    font-size: 20px;
+    border-radius: 40px ;
+    font-weight: bold;
 }
 
 #summary {
@@ -25,7 +31,8 @@ body{
     align-items: center;
     margin-top: 15vh;
     font-size: 30px;
-    outline: 2px solid red;
+    margin-bottom: 10vh;
+
 }
 
 #rating-box{
@@ -39,12 +46,21 @@ body{
     overflow: hidden;
 }
 
+
+
 .rate-btn{
+    display: inline-block;
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
+    border: none;
+    font-size: 20px;
+    border-radius: 40px ;
+    margin-top: 2px;
     width: 50%;
     height:50px;
-    margin-top: 2px;
-
+    
+    
 }
+
 .star img{
       height:80px;
       width:80px;

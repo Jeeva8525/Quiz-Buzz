@@ -1,5 +1,6 @@
 body{
     font-family: DM sans;
+    background-color: #1F2605;
 } 
 
 *{
@@ -9,6 +10,7 @@ body{
 *:focus{
     outline: none;
 }
+
 
 a,
 a:hover,
@@ -21,7 +23,7 @@ a:focus {
 
 #header{
     position: fixed;
-    background-color: #42D674;
+    background: linear-gradient(to bottom, #000000, #1f2605);
     height:13vh;
     padding-top: 3px;
     display: flex;
@@ -94,7 +96,18 @@ a:focus {
     border-radius: 20px;
     border: none ;
     margin-right: auto;
-    margin-left: 20px;;
+    margin-left: 20px;
+    background-color:#000000;
+    color:#D6CE15;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#home-btn:hover{
+    background-color: #D6CE15;
+    color: black;
+    transition: background-color 0.3s,
+                color 0.3s;
 }
 
 
@@ -104,3 +117,4 @@ a:focus {
     height:30%;
     top : 6px;
 }
+

@@ -4,6 +4,7 @@ const quizTopic = document.getElementById('quizTopic');
 const submitButton = document.getElementById('submitButton');
 
 const addOptionsButton = document.getElementById('addOptionsButton');
+const topicDropDown = document.getElementById('topic-drop-down');
 
 let quesNo = 1;
 let optionsNo = [-1, 2]; //optionsNo is 1-based-index  // first question is already created with two default options => optionsNo[1] = 2
@@ -18,7 +19,7 @@ function addOptions(qNo) {
                 type="text" 
                 id='question-${qNo}-option-${++optionsNo[qNo]}'
                 onblur="updateCorrectAnswerChoices(event,${qNo},${optionsNo[qNo]})"
-                autocomplete="off
+                autocomplete="off"
             >
             <button onclick="removeOption(event)">X</button>
         </div>
@@ -74,7 +75,7 @@ function addQuestions() {
                         type="text" 
                         id='question-${quesNo}-option-${++optionsNo[quesNo]}'
                         onblur="updateCorrectAnswerChoices(event,${quesNo},${optionsNo[quesNo]})"
-                         autocomplete="off
+                         autocomplete="off"
                     > 
                 </div>
             </div>
@@ -173,3 +174,17 @@ function submit() {
     window.location.href='/';
     // console.log('exited')
 }
+
+async function renderTopics(){
+    const response=await fetch('/api/topics');
+    topics= await response.json();
+    let html='';
+    topics.forEach((e)=>{
+       html+=`<option value="${e}">${e}</option>`
+    });
+
+    topicDropDown.innerHTML+=html;
+    
+}
+
+renderTopics()

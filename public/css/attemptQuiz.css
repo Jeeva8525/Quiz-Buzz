@@ -1,6 +1,6 @@
 body{
   font-family: DM Sans;
-  background-color:rgb(203, 255, 161);
+  
 }
 
 
@@ -11,16 +11,28 @@ body{
     margin-right : auto;
     padding : 10px 15px;
     border-radius : 5px;
-    color : white;
-    background-color: #00a2ca;
+    font-size: 20px;;
+    color : rgb(0, 0, 0);
+    font-weight: bold;
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
     cursor : pointer;
 }
+
+input[type="radio"] {
+  accent-color: #1F2605;
+}
+
 #details{
     display: flex;
-    margin-top: 15vh;
+    margin-top: 13.5vh;
     flex-direction: column;
-    padding-left: 40%;
-    font-size: 30px;;
+
+    font-size: 60px;
+    text-align: center;
+    /* border: 2px solid white; */
+    background: linear-gradient(to top, #1F2605, #000000);
+
+    color:#D6CE15
 }
 #qns-container{
     display: block ;
@@ -30,11 +42,14 @@ body{
 }
 
 .qns{
-    border: 2px solid red;
+
+    background: linear-gradient(to bottom, #53900F, #D6CE15);
     border-radius: 20px;
     margin-top: 20px;
     margin-left: 20px;  
     padding: 30px;
     padding-top: 20px;
     font-size: 20px;
+    font-weight: bold;
 }
+
