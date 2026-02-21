@@ -50,10 +50,19 @@ a:focus {
 }
 
 #header-logo img{
-    width:80%;
-    height:100%;
+    width:134px;
+    height:82px;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 20px;;
 }
 
+/* #header-logo img{
+    margin-top: 10px;
+    width:55%;
+    height:90%;
+    border-radius: 20px;
+} */
 
 
 

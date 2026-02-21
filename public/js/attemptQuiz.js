@@ -96,7 +96,7 @@ function render(quiz){
 async function main(){
     const response = await fetch(`/api/quiz/${quizID}`);
     singleQuiz= await response.json();
-    document.title=singleQuiz.name;
+    document.title='Quizard-' + singleQuiz.name;
     render(singleQuiz);
 }
 

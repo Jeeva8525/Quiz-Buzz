@@ -188,20 +188,13 @@
         "Spielberg",
         "Nolan",
         "Christopher Nolan"
-      ],
-      [
-        "Oscar award is for?",
-        "Movies",
-        "Sports",
-        "Movies",
-        "Music"
       ]
     ],
-    "attempts": 12,
-    "avgScore": 1.2750000000000001,
-    "highestScore": 2,
-    "rating": 1.5,
-    "totalReviews": 16
+    "attempts": 1,
+    "avgScore": 1,
+    "highestScore": 1,
+    "rating": 3,
+    "totalReviews": 1
   },
   "f3c0a8f2-bd2f-4a1e-8c52-d6a29e85b10a": {
     "name": "quiz8",

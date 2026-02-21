@@ -145,7 +145,7 @@ async function main(){
     choices = await response1.json();
     const response2 = await fetch(`/api/quiz/${quizID}`);
     singleQuiz = await response2.json();
-    document.title = `${singleQuiz.name} | score`;
+    document.title = 'Quizard-'+`${singleQuiz.name}`;
     render(singleQuiz,choices)
     
 }

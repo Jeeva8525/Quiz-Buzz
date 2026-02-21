@@ -7,7 +7,6 @@ let singleQuiz;
 async function main(){
     const response = await fetch(`/api/quiz/${quizID}`);
     singleQuiz = await response.json();
-    document.title=`${singleQuiz.name} | delete`;
     Tag.innerHTML=`Do you want to delete ${singleQuiz.name}?<hr>
                    <a href="/"><button class='btn'>Go Back</button></a>
                    <button class='btn'>Yes, I'm Sure</button>`;

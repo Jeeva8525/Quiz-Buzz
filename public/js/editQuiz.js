@@ -214,6 +214,7 @@ async function renderTopics(){
 
     topicDropDown.innerHTML+=html;
     
+    
 }
 
 renderTopics()
