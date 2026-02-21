@@ -1,8 +1,9 @@
 
 
-document.body.innerHTML = `<div id="header"></div>
+let html = `<div id="header"></div>
                            <div id="search-bar"></div>
                           <div id="quiz-container"></div>`;
+document.body.innerHTML+=html;
 
 const quizContainerTag = document.getElementById('quiz-container');
 

@@ -2,7 +2,7 @@
 	"name": "quiz-website",
 	"version": "1.0.0",
 	"description": "",
-	"main": "app.js",
+	"main": "app1.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node app.js",
@@ -22,8 +22,10 @@
 	"homepage": "https://github.com/Vishveshwaran-A/Quiz-website#readme",
 	"dependencies": {
 		"@vercel/kv": "^3.0.0",
+		"dotenv": "^17.3.1",
 		"express": "^4.22.1",
 		"express-validator": "^7.3.1",
+		"mongodb": "^7.1.0",
 		"uuid": "^13.0.0"
 	}
 }

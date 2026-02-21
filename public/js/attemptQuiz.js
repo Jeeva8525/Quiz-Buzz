@@ -1,12 +1,13 @@
 const quizID = window.location.pathname.split("/").pop();
 
 let singleQuiz=null;
-document.body.innerHTML=`<div id="header"></div>
+let html=`<div id="header"></div>
                          <div id="details"></div>
                          <div id="qns-container"></div>
                         <button id="submit-btn">Submit</button>
                         <div id="score"></div>`;
 
+document.body.innerHTML+=html;
 
 window.addEventListener('pageshow', () => {
     const radios = document.querySelectorAll('input[type="radio"]');

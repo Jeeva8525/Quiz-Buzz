@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 let dbConnection;
 
 export async function connectToDb() {
-    const client = new MongoClient("mongodb+srv://vishveshwaran:135off120@blue-cluster.f1emu6s.mongodb.net/?appName=Blue-Cluster");
+    const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
     dbConnection = client.db("quizard");
     console.log("Connected to MongoDB");

@@ -1,5 +1,5 @@
 
-document.body.innerHTML+=`<div id="summary"></div>
+let html=`<div id="summary"></div>
                      <div id="score"></div>
                      <div id="rating-box">
                      <div id="stars">
@@ -11,6 +11,7 @@ document.body.innerHTML+=`<div id="summary"></div>
                      </div>
                      <div id="btns-box"><button class="rate-btn">No, Thanks</button><button class="rate-btn">Rate</button></div></div>`;
 
+document.body.innerHTML+=html;
 
 const URLpath = window.location.pathname.split("/");
 const quizID= URLpath[URLpath.length-3];

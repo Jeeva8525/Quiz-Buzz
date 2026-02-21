@@ -7,6 +7,8 @@ import { validationResult, matchedData, checkSchema } from 'express-validator';
 import { log } from 'console'; //instead of console.log(), can also use log();
 import {connectToDb,getDB } from './DBconnection/db.js';
 import { ObjectId } from 'mongodb';
+import dotenv from "dotenv";
+dotenv.config();
 
 
 
